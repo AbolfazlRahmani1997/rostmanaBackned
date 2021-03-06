@@ -1,0 +1,29 @@
+body {
+    direction: rtl;
+    text-align: right;
+}
+
+
+
+#back-aboutME{
+    background-image: url("../img/aboutMe/IMG_6990.JPG");
+    background-position: center;
+    background-size: cover;
+    height: 400px !important;
+
+}
+#back-info{
+    background-image: url("../img/aboutMe/دفتر ما.JPG");
+    background-size: cover;
+    background-attachment:fixed ;
+    background-position: center;
+    opacity: 0.9;
+}
+#P_Profile>div{
+border-radius: 20px;
+    padding: 50px 0;
+}
+
+
+
+

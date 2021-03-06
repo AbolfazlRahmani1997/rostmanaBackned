@@ -1,0 +1,49 @@
+body {
+    direction: rtl;
+    text-align: right;
+}
+#back_call{
+
+    height: 100px !important;
+}
+#contant_back{
+    margin-top: 100px;
+    height: 600px !important;
+    background-image: url("../img/contactus/slider.jpg");
+    background-position: center;
+    background-attachment: fixed;
+    background-size: cover;
+}
+#logo-box>div>div:nth-child(1){
+
+}
+#logo-box>div>div:nth-child(2){
+
+}
+
+#logo-box>div>div{
+
+   margin-top: 10px;
+}
+#bili-right{
+    background-image: url("../img/contactus/location 1.png");
+    background-position: center;
+    background-size: cover;
+box-shadow:0 0 10px black;
+    left:-500px; height: 800px;transform: rotate(7deg);
+}
+#bili-left{
+
+}
+#bili-left{
+  box-shadow: 0 0 10px #7b7b7b;
+    left: 100px; height: 1200px;transform: rotate(-7deg);   background-color: rgba(255, 255, 255, 0.8);
+}
+
+
+#back_billi{
+    background-image: url("../img/contactus/تماس با ما.png");
+    background-size: cover;
+    background-position: center;
+    height: 900px;
+}

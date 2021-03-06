@@ -1,0 +1,289 @@
+
+body {
+    padding: 0;
+    direction: rtl;
+    text-align: right;
+}
+
+
+
+
+
+#boxmain{
+    background-image: url("../img/background2.png");
+    background-attachment: fixed;
+    background-size: cover;
+
+
+}
+#slider{
+
+}
+#slider>div{
+background-color: #0b2e13;
+}
+
+.sliderd{
+
+    /*background-size: cover;*/
+    /*background-attachment: fixed;*/
+    /*height: 500px;*/
+    /*!*display: none;*!*/
+    /*top: 0;*/
+    /*position: absolute;*/
+
+
+
+
+
+}
+#slider{
+    transition: all 10ms;
+    overflow: hidden;
+}
+#slide{
+
+    background-image: url("../img/21.jpg");
+    display: block;
+}
+#slide1{
+    background-image: url("../img/backgarund1.jpg");
+    display: none;
+
+}
+
+.rounded{
+    border-radius: 10px;
+}
+
+#cat-plant>div:nth-child(1){
+    box-shadow: 0 0 10px rgba(0,0,0,0.5) ;
+    background-image: url("../img/plant-cat/برگ سبز.jpg");
+    background-position: center;
+    background-size: cover;
+}
+
+@media only screen and (max-width: 780px) {
+    #logo_footer{
+        display: none !important;
+    }
+.carousel-inner{
+    height: 300px;
+}
+}
+
+/*#logo_footer{*/
+/*    background-image: url("../img/logo.png");*/
+/*    background-size: cover;*/
+/*    background-position:center ;*/
+/*    width: 100px;*/
+/*    height: 50px;*/
+/*}*/
+
+#plants>div{
+    height: 150px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px black;
+    margin-top: 10px;
+}
+#plants>div:nth-child(4){
+    background-image: url("../img/plant-cat/گل فصلی.jpg");
+    background-position: center;
+    background-size: cover;
+    margin-bottom: 50px;
+}
+#plants>div:nth-child(3){
+    background-image: url("../img/plant-cat/کاکتوس.jpg");
+    background-position: center;
+    background-size: cover;
+}
+#plants>div:nth-child(2){
+    background-image: url("../img/plant-cat/ارگانیک.jpg");
+    background-position: center;
+    background-size: cover;
+}
+#icon-box>i{
+    margin-right: 10px;
+    margin-top: 10px;
+}
+
+#plants>div:nth-child(1){
+
+    background-image: url("../img/plant-cat/درختچه.jpg");
+    background-position: center;
+    background-size: cover;
+}
+#cat-plant>div:nth-child(3){
+
+    box-shadow: 0 0 10px rgba(0,0,0,0.5) ;
+    background-image: url("../img/plant-cat/درمانی.jpg");
+    background-position: center;
+    background-size: cover;
+}
+.service-box{
+overflow: hidden;
+    transition:all 2s ;
+
+}
+.service-child{
+    text-align: center;
+}
+#treebox{
+margin-top: 0px;
+
+}
+#service_box1{
+    background-image: url("../img/14.jpg");
+    opacity: 1;
+    background-position: center;
+    background-size: cover;
+}
+#service_box2{
+    background-image: url("../img/13.jpg");
+    opacity: 1;
+    background-position: center;
+    background-size: cover;
+}
+#service_box3{
+    background-image: url("../img/MMP.jpg");
+    opacity: 1;
+    background-position: center;
+    background-size: cover;
+}
+.service-box{
+    border-radius: 10px;
+
+}
+
+#background_flower{
+    background-image: url("../img/ژربرا آفریقایی.jpg");
+    height: 300px;
+    opacity: 0.99;
+    background-size: cover;
+    background-position: center;
+
+}
+
+#daroCate{
+    height: 500px;
+background-position: center;
+    background-size: cover;
+    background-image: url("../img/درمانی.jpg");
+}
+
+
+#treebox>div{
+    padding: 0;
+
+    /*opacity: 0.5;*/
+    height: 450px;
+    box-shadow: 0 0 10px black;
+    border-radius: 10px;
+}
+#treebox>div:nth-child(1){
+
+    background-image: url("../img/b.png");
+    background-size: cover;
+    background-position: center;
+    background-attachment:local;
+}
+
+
+.active img{
+    transition: 8s !important;
+    transform: scale(1.2);
+}
+#app_background{
+
+    background-image: url("../img/application/APP17.jpg");
+    margin-top: 200px;
+    background-position: center;
+    /*background-color: #1d2124;*/
+    background-size: cover;
+
+    height: 600px;
+
+}
+#back-about{
+    background-image: url("../img/aboutMe/درباره ما.jpg");
+    background-position: center;
+    background-size: cover;
+    background-attachment: local;
+}
+#phone_background{
+    background-image: url("../img/application/اپلیکیشن.png")!important;
+    background-position: center;
+    background-size: cover;
+    background-attachment: local;
+    height: 750px;
+    transitiona:all 10;
+}
+
+
+@media only screen and (max-width: 1000px) {
+    .services_icons{
+        max-width: 10px !important;
+        margin: auto;
+        text-align: center;
+        display: block;
+    }
+
+    #cat-plant>div:nth-child(1){
+        height: 250px !important;
+    }
+    #cat-plant>div:nth-child(3){
+        height: 250px !important;
+    }
+    #plants>div{
+        height: 250px !important;
+    }
+
+
+    .navbar-collapse {
+        position: absolute;
+        top: 54px;
+        left: 100%;
+        padding-left: 15px;
+        padding-right: 15px;
+        padding-bottom: 15px;
+        width: 100%;
+        transition: all 0.4s ease;
+        display: block;
+    }
+    .navbar-toggler-icon{
+
+    }
+
+
+    .navbar-collapse.collapsing {
+        height: auto !important;
+        margin-left: 50%;
+        /*margin-top: 100px;*/
+        opacity: 0;
+        right: 50%;
+        transition: all 0.2s ease;
+    }
+
+    .navbar-collapse.show {
+        top: 70px;
+        right: 0;
+        opacity: 1;
+        background-color: #1d2124;
+        width: 50%;
+
+    }
+
+}
+
+/*.services_subtitle{*/
+/*    text-align: center;*/
+/*}*/
+#gsc-i-id1{
+  background: none !important;
+}
+
+.gsc-control-cse {
+     background-color: rgba(0,0,0,0) !important;
+     border: none !important;
+}
+
