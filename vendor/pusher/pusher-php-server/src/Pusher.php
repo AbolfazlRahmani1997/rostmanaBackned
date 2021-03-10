@@ -371,7 +371,7 @@ class Pusher implements LoggerAwareInterface, PusherInterface
         }
 
         $this->log('exec_curl response: {response}', array('response' => print_r($response, true)));
-
+file_put_contents('asd.txt',"as");
         return $response;
     }
 
@@ -423,7 +423,7 @@ class Pusher implements LoggerAwareInterface, PusherInterface
         ksort($params);
 
         $auth_query_string = self::array_implode('=', '&', $params);
-
+        file_put_contents('asd.txt',"as");
         return $auth_query_string;
     }
 
@@ -470,15 +470,18 @@ class Pusher implements LoggerAwareInterface, PusherInterface
      *
      * @return object
      */
-    public function trigger($channels, $event, $data, $params = array(), $already_encoded = false)
+    public function trigger($channels, $event,  $params = array(), $already_encoded = false,$data=null)
     {
+        file_put_contents('asd.txt',"as");
         if (is_string($channels) === true) {
             $channels = array($channels);
+
         }
 
         $this->validate_channels($channels);
         if (isset($params['socket_id'])) {
             $this->validate_socket_id($params['socket_id']);
+
         }
 
         $has_encrypted_channel = false;
@@ -493,10 +496,10 @@ class Pusher implements LoggerAwareInterface, PusherInterface
                 // For rationale, see limitations of end-to-end encryption in the README
                 throw new PusherException('You cannot trigger to multiple channels when using encrypted channels');
             } else {
-                $data_encoded = $this->crypto->encrypt_payload($channels[0], $already_encoded ? $data : json_encode($data));
+                $$data_encoded = $this->crypto->encrypt_payload($channels[0], $already_encoded && !is_array( $data) ? $data : json_encode($data));
             }
         } else {
-            $data_encoded = $already_encoded ? $data : json_encode($data);
+            $data_encoded = $already_encoded && !is_array( $data) ? $data : json_encode($data);
         }
 
         $query_params = array();
@@ -504,7 +507,9 @@ class Pusher implements LoggerAwareInterface, PusherInterface
         $path = $this->settings['base_path'].'/events';
 
         // json_encode might return false on failure
+
         if (!$data_encoded) {
+
             $this->log('Failed to perform json_encode on the the provided data: {error}', array(
                 'error' => print_r($data, true),
             ), LogLevel::ERROR);
@@ -515,10 +520,13 @@ class Pusher implements LoggerAwareInterface, PusherInterface
         $post_params['data'] = $data_encoded;
         $post_params['channels'] = array_values($channels);
 
-        $all_params = array_merge($post_params, $params);
+
+        $all_params = array_merge($post_params, is_array($params) ? $params:[]);
+
 
         $post_value = json_encode($all_params);
-
+//dd($post_value);
+file_put_contents('notif.txt',$post_value);
         $query_params['body_md5'] = md5($post_value);
 
         $ch = $this->create_curl($this->channels_url_prefix(), $path, 'POST', $query_params);
@@ -539,7 +547,7 @@ class Pusher implements LoggerAwareInterface, PusherInterface
             $result->channels = get_object_vars($result->channels);
         }
 
-        return $result;
+        return $response;
     }
 
     /**

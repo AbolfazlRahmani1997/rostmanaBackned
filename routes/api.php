@@ -19,8 +19,9 @@ use Illuminate\Support\Facades\Route;
 //});
 
 
-Route::group(['prefix'=>'Mobile','middleware'=>'auth:api'],function (){
 
+Route::group(['prefix'=>'Mobile','middleware'=>'auth:api'],function (){
+    Route::post('/lastLog/{id}','BuilderController@laststatus');
     Route::post('/addPlant','PlantController@singaddPlant');
     Route::resource('/Ticket','TikerController');
     Route::get('/Category/{id}','CategoryPlantController@selectPlant');
@@ -43,6 +44,10 @@ Route::post('Config/{id}','ComandController@setConfig');
 
 Route::group(['prefix'=>'builder'],function (){
    Route::post('UpdateLog','BuilderController@UpdateLog');
+   Route::post('test',function (Request $request){
+       file_put_contents("pouya.txt",$request->value1);
+   });
+
 
 });
 

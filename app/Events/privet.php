@@ -11,19 +11,21 @@ use Illuminate\Contracts\Broadcasting\ShouldBroadcastNow;
 use Illuminate\Foundation\Events\Dispatchable;
 use Illuminate\Queue\SerializesModels;
 
-class MyEvent implements ShouldBroadcastNow
+class privet implements ShouldBroadcastNow
 {
-    use Dispatchable, InteractsWithSockets, SerializesModels;
 
-    public $id;
+use Dispatchable, InteractsWithSockets, SerializesModels;
+
+
     public $data;
     public $message;
-//public $type;
+    public $id;
+
 
     public function __construct($message,$id)
     {
-        $this->data = $message;
         $this->id=$id;
+        $this->data = $message;
     }
 
     public function broadcastOn()
@@ -37,6 +39,6 @@ class MyEvent implements ShouldBroadcastNow
     public function broadcastAs()
     {
 
-        return "$this->id";
+        return 'My';
     }
 }

@@ -20,7 +20,7 @@ class User extends Authenticatable
     protected $fillable = [
        'firstname', 'phonenumber', 'email', 'password','id',
     ];
-
+//protected $hidden=['Builder'];
 
     public function Profile(){
         return $this->hasOne('App\Profile','user_id');

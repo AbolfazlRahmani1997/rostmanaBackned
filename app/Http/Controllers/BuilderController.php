@@ -158,4 +158,12 @@ return response()->json("asdf",200);
         $builder->Delete();
         return redirect()->route('Builder.index');
     }
+
+    public function laststatus($id)
+    {
+        $builder=builder::find($id);
+        $log=$builder->Log()->orderBy('created_at','desc')->first();
+
+        return response()->json($log);
+    }
 }

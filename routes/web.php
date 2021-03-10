@@ -69,7 +69,7 @@ Auth::routes();
 Route::get('/home', 'HomeController@index')->name('home');
 Route::get('/a',function (){
 
-    event(new MyEvent('hello world'));
+    event(new MyEvent('fuckkkkkk',10));
 
 });
 Route::get('/b',function (){

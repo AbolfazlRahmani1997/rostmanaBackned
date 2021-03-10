@@ -225,7 +225,7 @@ class UserController extends Controller
             $OFF_ON_light_status=($log->count())-$log->where('light_status','=','1')->count();
             $OFF_ON_pump_w=($log->count())-$log->where('pump_w','=','1')->count();
 //       dd(Carbon::parse($log[0]->created_at)->format('Y-m-d'));
-            $logsa=array("time"=>Carbon::parse($log[0]->created_at)->format('Y-m-d '),"Day"=>Carbon::parse($log[0]->created_at)->format('l'),'temp'=>number_format('', 2),'humidity_air'=>$log->avg('humidity_air'),'humidity_soil'=>$log->avg('humidity_soil'),'Num_OFF_FAN'=>$OFF_ON_FAN,'Num_OFF_Fogger'=>$OFF_ON_Fogger,'Num_OFF_light'=>$OFF_ON_light_status,'Num_OFF_pump_w'=>$OFF_ON_pump_w,'num_ON_Element'=>$OFF_ON_Element);
+            $logsa=array("time"=>Carbon::parse($log[0]->created_at)->format('Y-m-d '),"Day"=>Carbon::parse($log[0]->created_at)->format('l'),'temp'=>round($log->avg('temp'), 2),'humidity_air'=>round($log->avg('humidity_air'), 2),'humidity_soil'=>round($log->avg('humidity_soil'), 2),'Num_OFF_FAN'=>$OFF_ON_FAN,'Num_OFF_Fogger'=>$OFF_ON_Fogger,'Num_OFF_light'=>$OFF_ON_light_status,'Num_OFF_pump_w'=>$OFF_ON_pump_w,'num_ON_Element'=>$OFF_ON_Element);
             array_push($totalArray,$logsa);
         }
         return response()->json($totalArray);

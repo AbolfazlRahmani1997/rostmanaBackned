@@ -19,7 +19,6 @@
         "laravel/tinker": "^2.5",
         "laravel/ui": "^2.4",
         "morilog/jalali": "3.*",
-        "pusher/pusher-php-server": "^5.0",
         "yajra/laravel-datatables-oracle": "^9.15"
     },
     "require-dev": {

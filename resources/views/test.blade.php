@@ -13,8 +13,8 @@
             cluster: 'eu'
         });
 
-        var channel = pusher.subscribe('my-channel');
-        channel.bind('MyEvent', function(data) {
+        var channel = pusher.subscribe('my-Channel');
+        channel.bind('10', function(data) {
             alert(JSON.stringify(data));
         });
     </script>
