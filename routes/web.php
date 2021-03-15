@@ -67,14 +67,7 @@ Route::resource('/material','GenderController');
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
-Route::get('/a',function (){
 
-    event(new MyEvent('fuckkkkkk',10));
-
-});
-Route::get('/b',function (){
-   return view('test');
-});
 //Route::get('/{id}',function ($id){
 //    $totalArray=array();
 //    $logs= DB::table('logs')->where('builder_id','=','7')->whereBetween('created_at', ['2020-12-21 00:00:00','2021-02-19 00:00:00'])->orderBy('created_at','DESC')->get()->groupBy(function($d) {

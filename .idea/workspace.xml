@@ -12,18 +12,6 @@
   <component name="ChangeListManager">
     <list default="true" id="56eff323-6ccb-440a-81bc-1709b0d6f2e2" name="Default Changelist" comment="&quot;master&quot;">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Console/Kernel.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Console/Kernel.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Events/MyEvent.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Events/MyEvent.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/BuilderController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/BuilderController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/UserController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/UserController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/User.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/broadcasting.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/broadcasting.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/test.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/test.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/api.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/api.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/pusher/pusher-php-server/src/Pusher.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/pusher/pusher-php-server/src/Pusher.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -383,6 +371,8 @@
       <workItem from="1615195394631" duration="7603000" />
       <workItem from="1615277084900" duration="8368000" />
       <workItem from="1615304252604" duration="2593000" />
+      <workItem from="1615374134737" duration="475000" />
+      <workItem from="1615728542836" duration="1349000" />
     </task>
     <servers />
   </component>

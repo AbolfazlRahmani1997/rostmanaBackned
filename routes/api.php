@@ -45,7 +45,7 @@ Route::post('Config/{id}','ComandController@setConfig');
 Route::group(['prefix'=>'builder'],function (){
    Route::post('UpdateLog','BuilderController@UpdateLog');
    Route::post('test',function (Request $request){
-       file_put_contents("pouya.txt",$request->value1);
+//       file_put_contents("pouya.txt",$request->value1);
    });
 
 
